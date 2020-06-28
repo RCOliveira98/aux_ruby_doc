@@ -6,12 +6,14 @@
             [(nzCollapsed)]="isCollapsed"
             [nzTrigger]="null">
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
+      <a routerLink="">
         <img [src]="logo" alt="logo">
-        <h1>Aux Ruby Doc</h1>
+        <h1>AUX-RUBY-DOC</h1>
       </a>
     </div>
-    <app-menu></app-menu>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <app-menu></app-menu>
+    </ul>
   </nz-sider>
   <nz-layout>
     <nz-header>
