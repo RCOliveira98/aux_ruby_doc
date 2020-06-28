@@ -11,28 +11,7 @@
         <h1>Aux Ruby Doc</h1>
       </a>
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="Início" nzIcon="dashboard">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Home</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Ruby</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Primeiros passos</a>
-          </li>
-        </ul>
-      </li>
-      <li nz-submenu nzOpen nzTitle="Array" nzIcon="form">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <app-menu></app-menu>
   </nz-sider>
   <nz-layout>
     <nz-header>
