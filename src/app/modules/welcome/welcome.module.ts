@@ -7,13 +7,17 @@ import { AboutRubyComponent } from './about-ruby/about-ruby.component';
 
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzListModule } from 'ng-zorro-antd/list';
-import { ListComponent } from './home/list/list.component';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
+import { NzCardModule } from 'ng-zorro-antd/card';
 
-const ngZorroAnt = [NzToolTipModule, NzListModule];
+import { ListComponent } from './home/list/list.component';
+import { CardImagesComponent } from './about-ruby/card-images/card-images.component';
+
+const ngZorroAnt = [NzToolTipModule, NzListModule, NzAlertModule, NzCardModule];
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutRubyComponent, ListComponent],
+  declarations: [HomeComponent, AboutRubyComponent, ListComponent, CardImagesComponent],
   imports: [
     CommonModule,
     WelcomeRoutingModule,

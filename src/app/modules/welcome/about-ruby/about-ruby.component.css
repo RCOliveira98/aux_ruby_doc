@@ -1,0 +1,18 @@
+.area {
+  border: 2px solid;
+  border-color: #001529;
+  background-color: #001529;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.img-max {
+  max-height: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  logo = '../assets/logoRuby.png';
+  logo = 'https://i.ibb.co/jgB2fx1/logoRuby.png';
   isCollapsed = false;
 }
