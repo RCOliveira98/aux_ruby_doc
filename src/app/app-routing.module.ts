@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'first_steps',
-    loadChildren: () => import('./modules/firt-steps/firt-steps.module').then(m => m.FirtStepsModule)
+    loadChildren: () => import('./modules/first-steps/first-steps.module').then(m => m.FirstStepsModule)
   }
 ];
 
