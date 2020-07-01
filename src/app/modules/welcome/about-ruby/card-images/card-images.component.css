@@ -1,0 +1,13 @@
+nz-card {
+  width: 100%;
+}
+
+nz-card:hover
+{
+        box-shadow:
+                1px 1px #e86b5c,
+                2px 2px #e86b5c,
+                3px 3px #e86b5c;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
