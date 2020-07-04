@@ -1,0 +1,15 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { ArrayRoutingModule } from './array-routing.module';
+import { IntroComponent } from './intro/intro.component';
+
+
+@NgModule({
+  declarations: [IntroComponent],
+  imports: [
+    CommonModule,
+    ArrayRoutingModule
+  ]
+})
+export class ArrayModule { }

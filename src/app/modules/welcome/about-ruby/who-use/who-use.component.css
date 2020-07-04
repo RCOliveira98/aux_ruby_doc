@@ -1,0 +1,14 @@
+nz-card {
+  width: 100%;
+}
+.img-fluid {
+  max-height: 150px;
+}
+
+.card {
+  margin-top: 5px;
+}
+
+.card:hover {
+  opacity: 0.9;
+}

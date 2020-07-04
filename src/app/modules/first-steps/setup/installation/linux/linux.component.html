@@ -1,0 +1,42 @@
+<div class="row">
+  <nz-collapse nzAccordion>
+    <nz-collapse-panel nzHeader="LINUX">
+      <h5>Ambiente LINUX (Debian, Mint, Ubuntu) <img [src]="image" class="img-fluid"></h5>
+      <p class="txt-primary">Instalação do RVM</p>
+      <p>
+        O RVM é uma ferramenta de linha de comando que nos possibilita instalar, gerenciar e trabalhar
+      com vários ambientes ruby de maneira muito simples e fácil. Tal ferramenta permite por exemplo instalarmos
+      mais de uma versão da linguagem ruby. Recomendamos o seu uso.
+      </p>
+
+      <p class="my-subtitle">01) Instale GPG keys: usada para verificar o pacote de instalação</p>
+      <div class="container-dark">
+        <span>gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span>
+      </div>
+      <p class="my-subtitle">02) Instale o CURL: é uma ferramenta de linha de comando para manipulação de URLs e transferência de dados</p>
+      <div class="container-dark">
+        <span>sudo apt-get install curl</span>
+      </div>
+      <p class="my-subtitle">03) Instale RVM</p>
+      <div class="container-dark">
+        <span>\curl -sSL https://get.rvm.io | bash -s stable</span>
+      </div>
+
+      <p class="my-subtitle">04) Após a instalação do rvm ele indicará a necessidade de rodar um comando para começar a utilizar o rvm. Analise seu terminal ele deverá mostrar um comando no formado do script abaixo:</p>
+      <div class="container-dark">
+        <span>source /home/SEU_USER/.rvm/script/rvm</span>
+      </div>
+
+      <p class="my-subtitle">05) Liste as opções de instalação ruby</p>
+      <div class="container-dark">
+        <span>rvm list known</span>
+      </div>
+
+      <p class="my-subtitle">06) Instale a versão ruby de sua preferência</p>
+      <div class="container-dark">
+        <span>rvm install 2.7.0</span>
+        <p># 2.7.0 é a versão</p>
+      </div>
+    </nz-collapse-panel>
+  </nz-collapse>
+</div>

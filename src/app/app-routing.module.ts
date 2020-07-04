@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'first_steps',
     loadChildren: () => import('./modules/first-steps/first-steps.module').then(m => m.FirstStepsModule)
+  },
+  {
+    path: 'array',
+    loadChildren: () => import('./modules/array/array.module').then(m => m.ArrayModule)
   }
 ];
 

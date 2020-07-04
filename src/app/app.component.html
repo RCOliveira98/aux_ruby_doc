@@ -12,7 +12,27 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <app-menu></app-menu>
+      <li nz-submenu nzOpen nzTitle="Início" nzIcon="home">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">ARD</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome/ruby">Ruby</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/first_steps">Primeiros passos</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu nzOpen nzTitle="Array" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="array/introduction">Introdução</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nz-sider>
   <nz-layout>
