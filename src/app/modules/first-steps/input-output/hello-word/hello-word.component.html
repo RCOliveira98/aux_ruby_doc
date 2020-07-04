@@ -1,0 +1,24 @@
+<div nz-row>
+  <nz-collapse nzAccordion>
+    <nz-collapse-panel nzHeader="Escrevendo mensagens..." nzActive>
+      <h5 class="txt-primary">Olá, mundo!</h5>
+      <p>
+        Dentro do universo da programação existe uma tradição de que o primeiro programa feito em
+        uma determinada linguagem deve ser o 'Olá, mundo!'. Tradição criada por que segundo a lenda aqueles
+        que não a seguem jamais serão bons programadores.
+      </p>
+
+      <p>
+        Agora surge a dúvida: como criar um programa para escrever uma simples mensagem na tela ou console de um dispositivo?
+        Para isso precisamos pedir ao dispositivo para escrever algo através de alguns comandos, dentre eles o <i class="txt-primary">puts</i>.
+      </p>
+
+      <nz-alert nzType="info" [nzMessage]="msg" nzShowIcon class="mt-2 mb-2"></nz-alert>
+
+      <div class="container-dark">
+        <code>puts 'Olá, mundo!'</code>
+      </div>
+    </nz-collapse-panel>
+  </nz-collapse>
+
+</div>
