@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-buttons-phases',
@@ -9,8 +10,9 @@ export class ButtonsPhasesComponent implements OnInit {
 
   option: number;
   list: any[];
+  renderAlert: boolean;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.list = [
@@ -21,6 +23,25 @@ export class ButtonsPhasesComponent implements OnInit {
       {value: 5, title: 'Estrutura de repetição'},
       {value: 6, title: 'Hash'}
     ];
+  }
+
+  redirectToUrl(): void {
+    this.option = Number(this.option);
+    let url: string;
+    switch (this.option) {
+      case 1: url = 'first_steps/installation'; break;
+      case 2: url = 'first_steps/input_output'; break;
+      case 3: url = 'first_steps/installation'; break;
+      case 4: url = 'first_steps/installation'; break;
+      case 5: url = 'first_steps/installation'; break;
+      case 6: url = 'first_steps/installation'; break;
+      case 7: url = 'first_steps/installation'; break;
+      default: this.renderAlert = true;
+    }
+    if (url) {
+      this.renderAlert = false;
+      this.router.navigate([url]);
+    }
   }
 
 }
