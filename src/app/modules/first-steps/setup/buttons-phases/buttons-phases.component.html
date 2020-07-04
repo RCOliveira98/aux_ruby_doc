@@ -1,13 +1,11 @@
-<div nz-row>
+<div class="row">
   <p>Tópicos:</p>
 </div>
 
-<div nz-row>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-      <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a person" name="option" [(ngModel)]="option">
-        <nz-option *ngFor="let op of list" [nzLabel]="op.title" [nzValue]="op.title"></nz-option>
-      </nz-select>
-    </div>
+<div class="row">
+  <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+    <nz-select [(ngModel)]="option" nzPlaceHolder="Informe o tópico desejado">
+      <nz-option *ngFor="let p of list" [nzValue]="p.value" [nzLabel]="p.title"></nz-option>
+    </nz-select>
   </div>
 </div>
