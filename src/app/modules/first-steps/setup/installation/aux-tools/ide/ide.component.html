@@ -1,0 +1,21 @@
+<div nz-row>
+  <h5 class="txt-primary"><strong>Editores de texto</strong></h5>
+
+  <p>
+    Você precisará de um editor de texto para desenvolver programas em ruby.
+    Existem várias opções no mercado, listamos abaixo algumas delas.
+  </p>
+
+  <nz-list nzItemLayout="horizontal">
+      <nz-list-item *ngFor="let item of editors">
+        <nz-list-item-meta
+          [nzAvatar]="item?.img"
+          [nzDescription]="item?.content"
+        >
+          <nz-list-item-meta-title>
+            <a [href]="item?.url">{{ item?.title }}</a>
+          </nz-list-item-meta-title>
+        </nz-list-item-meta>
+      </nz-list-item>
+    </nz-list>
+</div>
