@@ -1,10 +1,10 @@
 <div nz-row>
   <nz-collapse nzAccordion>
     <nz-collapse-panel nzHeader="Escrevendo mensagens..." nzActive>
-      <h5 class="txt-primary">Olá, mundo!</h5>
+      <h5 class="txt-primary"><fa-icon [icon]="smile"></fa-icon> Olá, mundo!</h5>
       <p>
         Dentro do universo da programação existe uma tradição de que o primeiro programa feito em
-        uma determinada linguagem deve ser o 'Olá, mundo!'. Tradição criada por que segundo a lenda aqueles
+        uma determinada linguagem seja o 'Olá, mundo!'. Tradição criada por que segundo a lenda aqueles
         que não a seguem jamais serão bons programadores.
       </p>
 
@@ -16,15 +16,24 @@
       <nz-alert nzType="info" [nzMessage]="msg" nzShowIcon class="mt-2 mb-2"></nz-alert>
 
       <div class="container-dark mb-2">
-        <code>puts 'Olá, mundo!'</code>
+        <code><i class="command">puts</i> 'Olá, mundo!'</code>
       </div>
 
       <p>
         Pronto, como uma <strong>única</strong> instrução você foi capaz de escrever seu primeiro programa em ruby.
-        Muito fácil, né? Agora, como essa 'mágica' ocoreu? O responsável pelo sucesso do seu programa foi o método <i>puts</i>.
-        Chamadas a métodos em ruby não precisam de parêteses '()', é algo <strong>opcional</strong>, diferentemente de outras linguagens como java, c e c++. Sendo uma característica da linguagem
-         que é conhecida como <i>syntactic sugar (áçucar sintático)</i>, deixando o código mais limpo, ou seja, menos poluído.
+        Muito fácil, né? Agora, como essa 'mágica' ocoreu? O responsável pelo sucesso de seu programa foi o método <i>puts</i>.
+        Ele imprime aquilo que encontra logo em sua frente e pula uma linha automaticamente após concluir a operação.
       </p>
+
+      <p>
+        Perceba que ao finalizar a instrução não é necessário colocar um <strong>;</strong>.
+        Outro detalhe é que chamadas a métodos em ruby não precisam de parêteses '()', é algo <strong>opcional</strong>, diferentemente de outras linguagens como java, c e c++. Sendo uma característica da linguagem
+         que é conhecida como <i>syntactic sugar (áçucar sintático)</i>, deixando o código mais limpo, ou seja, menos poluído. Mas como é algo opcional você pode fazer uso dos (), observe:
+      </p>
+
+      <div class="container-dark mb-2">
+        <code><i class="command">puts</i> ('Olá, mundo!')</code>
+      </div>
     </nz-collapse-panel>
   </nz-collapse>
 

@@ -17,6 +17,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { MenuComponent } from './components/menu/menu.component';
 import { ItemMenuInicioComponent } from './components/menu/item-menu-inicio/item-menu-inicio.component';
 import { ItemMenuArrayComponent } from './components/menu/item-menu-array/item-menu-array.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const ngZorroAnt = [NzLayoutModule, NzMenuModule];
 
@@ -36,7 +37,8 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ngZorroAnt
+    ngZorroAnt,
+    FontAwesomeModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

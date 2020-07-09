@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { FirstStepsRoutingModule } from './first-steps-routing.module';
 import { SetupComponent } from './setup/setup.component';
-import { ButtonsPhasesComponent } from './setup/buttons-phases/buttons-phases.component';
+import { ButtonsPhasesComponent } from './buttons-phases/buttons-phases.component';
 import { InstallationComponent } from './setup/installation/installation.component';
 import { LinuxComponent } from './setup/installation/linux/linux.component';
 import { WindowsComponent } from './setup/installation/windows/windows.component';
@@ -16,6 +16,7 @@ import { IntroToolsComponent } from './setup/installation/aux-tools/intro-tools/
 import { ImageToolsComponent } from './setup/installation/aux-tools/image-tools/image-tools.component';
 import { IstallToolsComponent } from './setup/installation/aux-tools/istall-tools/istall-tools.component';
 import { IdeComponent } from './setup/installation/aux-tools/ide/ide.component';
+import { ReaderComponent } from './input-output/reader/reader.component';
 
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
@@ -24,7 +25,9 @@ import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzListModule } from 'ng-zorro-antd/list';
 
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DataTypesComponent } from './data-types/data-types.component';
+import { StringTypeComponent } from './data-types/string-type/string-type.component';
 
 const ngZorroAnt = [
   NzIconModule,
@@ -49,13 +52,17 @@ const ngZorroAnt = [
     IntroToolsComponent,
     ImageToolsComponent,
     IstallToolsComponent,
-    IdeComponent
+    IdeComponent,
+    ReaderComponent,
+    DataTypesComponent,
+    StringTypeComponent
   ],
   imports: [
     CommonModule,
     FirstStepsRoutingModule,
     FormsModule,
-    ngZorroAnt
+    ngZorroAnt,
+    FontAwesomeModule
   ]
 })
 export class FirstStepsModule { }

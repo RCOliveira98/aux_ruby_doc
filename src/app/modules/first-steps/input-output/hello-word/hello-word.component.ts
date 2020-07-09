@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { faSmile } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-hello-word',
   templateUrl: './hello-word.component.html',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HelloWordComponent implements OnInit {
 
   msg: string;
+  smile = faSmile;
 
   constructor() { }
 
