@@ -1,0 +1,50 @@
+<div nz-row class="mt-2">
+  <nz-collapse nzAccordion>
+    <nz-collapse-panel nzHeader="Armazenando valores...">
+      <h5 class="txt-primary"><fa-icon [icon]="memory"></fa-icon> Variáveis</h5>
+      <p>
+        A maioria dos programas desenvolvidos precisa armazenar dados, como por exemplo: data de nascimento, endereço, número de cartão de crédito ou débito, nome etc.
+        Na computação existe o que é denominado de variável, que em poucas palavras é uma posição de memória do computador destinada a armazenar valores de um dado tipo de dado.
+        Para manipular essas variáveis (endereços de memória) são atribuídas a elas nomes.
+      </p>
+
+      <div class="container-dark mt-2 mb-2">
+        <code>
+          <i class="txt-primary">puts</i> 'Informe seu nome:'<br>
+          <i class="var">nome</i> = <i class="txt-primary">gets</i><br>
+          <i class="txt-primary">puts</i> <i class="var"> nome</i>
+        </code>
+      </div>
+
+      <p>
+        O que fizemos? Informamos ao computador para imprimir a mensagem <i>informe seu nome:</i>,
+        depois para fazer a leitura do dado informado pelo usuário, depois para pegar o que foi
+        capturado e armazenar na variável <i>nome</i>, por fim imprimir o conteúdo da variável <i>nome</i>.
+      </p>
+
+      <p>
+        No exemplo acima, foi possível armazenar o nome do usuário em uma variável denominada de <i>nome</i>.
+        Perceba que em ruby variáveis não precisam serem declaradas previamente antes de seu uso, assim como
+         o tipo de dado não precisa ser informado, pois ela é inteligente o suficiente para descobrir o tipo
+         de dado com base no valor armazenado, característica chamada de <i>inferência de tipos</i>.
+      </p>
+
+      <p>
+        A captura do valor informado pelo usuário só foi possível por causa do método <i>gets</i>.
+        Tal método lê tudo que encontrar até uma mudança de linha provocada por exemplo pela tecla enter.
+        Ao término da leitura o conteúdo lido é retornado, no exemplo anterior o retorno do método foi atribuído a variável <i>nome</i>.
+      </p>
+
+      <nz-alert nzType="warning" [nzMessage]="msgGet" nzShowIcon></nz-alert>
+    </nz-collapse-panel>
+  </nz-collapse>
+
+</div>
+
+<ng-template #msgGet>
+  <p>
+    <strong>Retorno do método gets</strong>: por padrão o método sempre retorna uma <i>string (um tipo de dado)</i>,
+    não importando o que seja digitado. Pois uma conversão automática para o tipo
+    <i>string</i> é realizada. No próximo tópico será abordado os tipos de dados da linguagem.
+  </p>
+</ng-template>
