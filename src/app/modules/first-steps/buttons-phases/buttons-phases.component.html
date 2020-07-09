@@ -1,0 +1,11 @@
+<div class="row">
+  <p>Tópicos:</p>
+</div>
+
+<div class="row">
+  <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+    <nz-select name="option" [(ngModel)]="option" nzPlaceHolder="Informe o tópico desejado" (ngModelChange)="redirectToUrl()">
+      <nz-option *ngFor="let p of list" [nzValue]="p.value" [nzLabel]="p.title"></nz-option>
+    </nz-select>
+  </div>
+</div>

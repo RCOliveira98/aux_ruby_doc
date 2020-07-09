@@ -37,3 +37,21 @@
   padding: 5px;
   color: white;
 }
+
+.command {
+  color: #e86b5c;
+  font-weight: bold;
+}
+
+.var {
+  color: #eca9a1;
+  font-weight: bold;
+}
+
+code {
+  color: white;
+}
+
+code .txt-primary {
+  font-weight: bold;
+}
