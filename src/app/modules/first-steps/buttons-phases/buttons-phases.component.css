@@ -5,3 +5,20 @@ p {
 .btn {
   margin-right: 2px;
 }
+
+.btn-light:hover {
+  background-color: #e86b5c;
+}
+
+.btn-light:hover {
+  color: white;
+  background-color: #e86b5c;
+  border-color: #dae0e5;
+}
+
+.btn-light:focus, .btn-light.focus {
+  color: white;
+  background-color: #e86b5c;
+  border-color: #dae0e5;
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}

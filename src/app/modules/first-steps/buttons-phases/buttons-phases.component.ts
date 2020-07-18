@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class ButtonsPhasesComponent implements OnInit {
 
-  option: number;
   list: any[];
   renderAlert: boolean;
 
@@ -26,10 +25,9 @@ export class ButtonsPhasesComponent implements OnInit {
     ];
   }
 
-  redirectToUrl(): void {
-    this.option = Number(this.option);
+  redirectToUrl(option: number): void {
     let url: string;
-    switch (this.option) {
+    switch (option) {
       case 1: url = 'first_steps/installation'; break;
       case 2: url = 'first_steps/input_output'; break;
       case 3: url = 'first_steps/data_types'; break;
