@@ -28,6 +28,8 @@ import { NzListModule } from 'ng-zorro-antd/list';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DataTypesComponent } from './data-types/data-types.component';
 import { StringTypeComponent } from './data-types/string-type/string-type.component';
+import { IntroStringTypeComponent } from './data-types/string-type/intro-string-type/intro-string-type.component';
+import { StringInterpolationComponent } from './data-types/string-type/string-interpolation/string-interpolation.component';
 
 const ngZorroAnt = [
   NzIconModule,
@@ -55,7 +57,9 @@ const ngZorroAnt = [
     IdeComponent,
     ReaderComponent,
     DataTypesComponent,
-    StringTypeComponent
+    StringTypeComponent,
+    IntroStringTypeComponent,
+    StringInterpolationComponent
   ],
   imports: [
     CommonModule,

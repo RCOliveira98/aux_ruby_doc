@@ -1,0 +1,48 @@
+<h5 class="txt-primary">String</h5>
+
+    <p>
+        Durante a rotina de um programador é muito comum a necessidade de armazenar textos ou caracteres, como: nome de usuário, senha, endereço, e-mail etc.
+        Na computação chamamos esses dados de tipo <strong>string</strong>! Em ruby qualquer valor que for declarado entre aspas será tratado como do tipo string.
+    </p>
+
+    <div class="container-dark b-radius mb-2">
+      <code>
+        <i class="var">email</i> = 'ard@email.com'<br>
+        <i class="command">puts</i><i class="var"> email</i><br>
+        <i class="var">password</i> = "123ruby"<br>
+        <i class="command">puts</i><i class="var"> password</i><br>
+      </code>
+    </div>
+
+    <p>
+      Perceba que variáveis do tipo string podem ser declaradas com aspas simples ('') ou duplas ("").
+      A delcaração por meio de aspas simples chega a ser um pouco mais perfomática pois a verificação
+      da presença de <i><strong>interpolação</strong></i> <i>-- em breve falarei sobre isso --</i> não é feita. Mas a
+      alternativa a declaração de variáveis com aspas duplas tem sua finalidade. Análise o código abaixo:
+    </p>
+
+    <div class="container-dark b-radius mb-2">
+      <code>
+        <i class="var">district</i> = 'Caixa D'água'<br>
+        <i class="command">puts</i><i class="var"> district</i><br>
+      </code>
+    </div>
+
+    <nz-alert nzType="error" nzShowIcon nzMessage="Provavelmente recebeu o seguinte erro -> SyntaxError: unexpected tIDENTIFIER, expecting end-of-input
+    district = 'caixa d'água'
+                        ^~~~~
+    "></nz-alert>
+
+    <p>
+      O erro ocorreu porque confundimos o <i>interpretador de código ruby</i> com o uso de aspas simples dentro do texto.
+      Não podemos declarar string com aspas simples e depois fazer o uso de aspas simples dentro do próprio texto! Por que?
+      Porque o interpretador não vai conseguir encontrar o fim da string. A alternativa a esse problema é
+      recorrer a declaração de strings com aspas duplas.
+    </p>
+
+    <div class="container-dark b-radius mb-2">
+      <code>
+        <i class="var">district</i> = "Caixa D'água"<br>
+        <i class="command">puts</i><i class="var"> district</i><br>
+      </code>
+    </div>
