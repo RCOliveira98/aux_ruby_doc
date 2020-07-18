@@ -8,6 +8,48 @@
         Para manipular essas variáveis (endereços de memória) são atribuídas a elas nomes.
       </p>
 
+      <h5 class="txt-primary">Declaração e atribuição de valores a variáveis</h5>
+
+      <p>
+        Para delcarar uma variável em ruby precisamos definir apenas um nome e atribuir um valor para ela.
+        Confira o exemplo abaixo:
+      </p>
+
+      <div class="container-dark mt-2 mb-2">
+        <code>
+          <i class="var">message</i> = <i>'Seja bem-vindo(a) ao mundo ruby!'</i><br>
+          <i class="txt-primary">puts</i><i class="var"> message</i>
+        </code>
+      </div>
+
+      <p>
+        Uau! Fizemos a delcaração de uma variável chamada de <strong>message</strong> e pedimos para ela armazenar o
+        texto <strong>'Seja bem-vindo(a) ao mundo ruby!'</strong>. Por fim utilizamos o método <strong>puts</strong> para o
+        dispositivo imprimir o conteúdo de nossa variável.
+      </p>
+
+      <nz-alert nzType="info" [nzMessage]="msgDeclaration" nzShowIcon></nz-alert>
+
+      <p>
+        Muito bem, agora perceba o quanto código ruby é próximo de nossa linguagem humana. Pois a leitura da instrução:
+        <i>message = 'Seja bem-vindo(a) ao mundo ruby!'</i> pode ser facilmente interpretada por nós
+        como: variável <i>message</i> receba (armazene) o valor de 'Seja bem-vindo(a) ao mundo ruby!'
+      </p>
+
+      <p>
+        Perceba que para informarmos que a variável <i>message</i>
+        armazenaria o conteúdo <i>'Seja bem-vindo(a) ao mundo ruby!'</i> fizemos o uso do <strong>símbolo de igual (=)</strong>,
+        que no mundo da programação é conhecido como operador de atribuição.
+      </p>
+
+      <p>
+        Uma das coisas interessantes em ruby é que variáveis não precisam serem declaradas previamente antes de seu uso, assim como
+         o tipo de dado não precisa ser informado, pois ela é inteligente o suficiente para descobrir o tipo
+         de dado com base no valor armazenado, característica chamada de <strong>inferência de tipos</strong>.
+      </p>
+
+      <p>Muito bom, mas que tal agora o usuário do programa definir o conteúdo de uma determinada variável?</p>
+
       <div class="container-dark mt-2 mb-2">
         <code>
           <i class="txt-primary">puts</i> 'Informe seu nome:'<br>
@@ -17,20 +59,13 @@
       </div>
 
       <p>
-        O que fizemos? Informamos ao computador para imprimir a mensagem <i>informe seu nome:</i>,
-        depois para fazer a leitura do dado informado pelo usuário, depois para pegar o que foi
-        capturado e armazenar na variável <i>nome</i>, por fim imprimir o conteúdo da variável <i>nome</i>.
+        O que fizemos? Informamos ao computador para imprimir a mensagem <strong>informe seu nome:</strong>,
+        depois para fazer a leitura do dado informado pelo usuário, pegar o que foi
+        capturado e armazenar na variável <strong>nome</strong>, por fim imprimir o conteúdo da variável <strong>nome</strong>.
       </p>
 
       <p>
-        No exemplo acima, foi possível armazenar o nome do usuário em uma variável denominada de <i>nome</i>.
-        Perceba que em ruby variáveis não precisam serem declaradas previamente antes de seu uso, assim como
-         o tipo de dado não precisa ser informado, pois ela é inteligente o suficiente para descobrir o tipo
-         de dado com base no valor armazenado, característica chamada de <i>inferência de tipos</i>.
-      </p>
-
-      <p>
-        A captura do valor informado pelo usuário só foi possível por causa do método <i>gets</i>.
+        A captura do valor informado pelo usuário só foi possível por causa do método <strong>gets</strong>.
         Tal método lê tudo que encontrar até uma mudança de linha provocada por exemplo pela tecla enter.
         Ao término da leitura o conteúdo lido é retornado, no exemplo anterior o retorno do método foi atribuído a variável <i>nome</i>.
       </p>
@@ -46,5 +81,13 @@
     <strong>Retorno do método gets</strong>: por padrão o método sempre retorna uma <i>string (um tipo de dado)</i>,
     não importando o que seja digitado. Pois uma conversão automática para o tipo
     <i>string</i> é realizada. No próximo tópico será abordado os tipos de dados da linguagem.
+  </p>
+</ng-template>
+
+
+<ng-template #msgDeclaration>
+  <p>
+    <strong>Uso de aspas (''):</strong> quando se deseja que variáveis recebam valores que sejam caracteres (letras, palavras , textos etc)
+    tais valores devem ficar entre aspas, sejam elas simples ou compostas:<br><strong>texto = 'Aspas simples'</strong> ou <strong>texto = "Aspas duplas"</strong>
   </p>
 </ng-template>
