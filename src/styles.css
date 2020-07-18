@@ -32,10 +32,36 @@
   color: #e86b5c;
 }
 
+.img-border:hover {
+  border-style: solid;
+  border-color: #e86b5c;
+  border-radius: 10px;
+}
+
+.b-primary {
+  border-style: solid;
+  border-color: #e86b5c;
+  border-radius: 10px;
+}
+
+.b-primary-hover:hover {
+  border-style: solid;
+  border-color: #e86b5c;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 .container-dark {
   background-color: #001529;
   padding: 5px;
   color: white;
+}
+
+.container-dark-hover-radius:hover {
+  background-color: #001529;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
 }
 
 .command {
