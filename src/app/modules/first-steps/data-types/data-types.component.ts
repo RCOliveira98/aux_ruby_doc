@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataTypesComponent implements OnInit {
 
+  troubledComputer: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.troubledComputer = 'https://i.ibb.co/23byLZZ/computer-Off.png';
   }
 
 }
