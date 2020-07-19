@@ -2,7 +2,7 @@
   <nz-collapse nzAccordion>
     <nz-collapse-panel nzHeader="Armazenando valores...">
 
-      <div class="container-dark-hover-radius">
+      <div class="container-dark-hover-radius mb-1">
         <h5 class="txt-primary"><fa-icon [icon]="memory"></fa-icon> Variáveis</h5>
         <p>
           A maioria dos programas desenvolvidos precisa armazenar dados, como por exemplo: data de nascimento, endereço, número de cartão de crédito ou débito, nome etc.
@@ -18,7 +18,7 @@
         Confira o exemplo abaixo:
       </p>
 
-      <div class="container-dark mt-2 mb-2">
+      <div class="ard-terminal mt-2 mb-2">
         <code>
           <i class="var">message</i> = <i>'Seja bem-vindo(a) ao mundo ruby!'</i><br>
           <i class="txt-primary">puts</i><i class="var"> message</i>
@@ -53,27 +53,32 @@
 
       <p>Muito bom, mas que tal agora o usuário do programa definir o conteúdo de uma determinada variável?</p>
 
-      <div class="container-dark mt-2 mb-2">
+      <div class="ard-terminal mt-2 mb-2">
         <code>
           <i class="txt-primary">puts</i> 'Informe seu nome:'<br>
-          <i class="var">nome</i> = <i class="txt-primary">gets</i><br>
-          <i class="txt-primary">puts</i> <i class="var"> nome</i>
+          <i class="var">name</i> = <i class="txt-primary">gets</i><br>
+          <i class="txt-primary">puts</i> <i class="var"> name</i>
         </code>
       </div>
 
       <p>
         O que fizemos? Informamos ao computador para imprimir a mensagem <strong>informe seu nome:</strong>,
         depois para fazer a leitura do dado informado pelo usuário, pegar o que foi
-        capturado e armazenar na variável <strong>nome</strong>, por fim imprimir o conteúdo da variável <strong>nome</strong>.
+        capturado e armazenar na variável <strong>name</strong>, por fim imprimir o conteúdo da variável <strong>name</strong>.
       </p>
 
       <p>
-        A captura do valor informado pelo usuário só foi possível por causa do método <strong>gets</strong>.
+        A captura do valor informado pelo usuário só foi possível graças ao método <strong>gets</strong>.
         Tal método lê tudo que encontrar até uma mudança de linha provocada por exemplo pela tecla enter.
         Ao término da leitura o conteúdo lido é retornado, no exemplo anterior o retorno do método foi atribuído a variável <i>nome</i>.
       </p>
 
-      <nz-alert nzType="warning" [nzMessage]="msgGet" nzShowIcon></nz-alert>
+      <nz-alert nzType="warning" [nzMessage]="msgGet" nzShowIcon class="mb-2"></nz-alert>
+
+      <app-snake-case></app-snake-case>
+
+      <nz-alert nzType="info" nzShowIcon nzMessage="Nome de variáveis: opte por usar língua inglesa na hora de escolher os nomes de suas variávies."></nz-alert>
+
     </nz-collapse-panel>
   </nz-collapse>
 

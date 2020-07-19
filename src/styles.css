@@ -57,6 +57,13 @@
   color: white;
 }
 
+.ard-terminal {
+  background-color: #001529;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
 .container-dark-hover-radius:hover {
   background-color: #001529;
   padding: 5px;
