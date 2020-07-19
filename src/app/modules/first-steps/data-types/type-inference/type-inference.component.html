@@ -1,0 +1,64 @@
+<section nz-row>
+
+  <h5 class="txt-primary">Ruby descobre o tipo de dado da variável <img [src]="imageCrystalBall" class="img-fluid"> </h5>
+  <p>
+    Você já descobriu o quão simples é declarar variáveis em ruby.
+    Precisamos apenas associar um nome a um determinado valor
+    e o ruby cuida do restante do trabalho para você.
+  </p>
+
+  <div class="row">
+    <div class="col-8">
+      <p>
+        Ruby descobre o tipo de dado da variável e separa um pedaço de memória do
+        seu dispositivo (computador, tablet etc) que seja suficiente -- de acordo com o tipo de dado -- para armazenar o valor desejado,
+        esse processo é conhecido como <i>alocação de memória</i>, mas não precisa se preocupar com isso pois o ruby cuida de todo o processo de gerencimanento de memória por você.
+      </p>
+    </div>
+
+    <div class="col-4">
+      <p class="text-center">
+        <img [src]="imageRest" alt="imagem de felicidade" class="img-fluid img-border">
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <img [src]="imagePensive" class="img-fluid img-border">
+    </div>
+
+    <div class="col-8">
+      <p>
+        Contudo, se você já conhece outras linguagens como Java e C acredito que tenha em algum momento se perguntado
+        por que não precisamos declarar os tipos de dados das variáveis. O ruby é muito inteligente, com base
+        no valor armazenado na variável ele determina o tipo de dado, característica chamada de <i><strong>inferência de tipos</strong></i>.
+      </p>
+    </div>
+  </div>
+
+  <div class="ard-terminal">
+    <code>
+      <i class="var">user_name</i> = 'Fulano123'<br>
+      <i class="var">code</i> = 1020<br>
+      <i class="var">is_man</i> = true<br>
+    </code>
+  </div>
+
+  <p class="mt-2">
+    A declaração de 03 (três) variáveis foi feita, mas você pode está se perguntando quais são os tipos de dados das variáveis declaradas.
+    Como podemos descobrir isso? Muito simples, basta perguntar para a própria variável! Existe um método chamado <i>class</i> que será útil nessa missão, analise o código abaixo:
+  </p>
+
+  <div class="ard-terminal">
+    <code>
+      <i class="var">user_name</i> = 'Fulano123'<br>
+      <i class="command">puts</i><i class="var"> user_name.class</i> # resultado: String<br>
+      <i class="var">code</i> = 1020<br>
+      <i class="command">puts</i><i class="var"> code.class</i> # resultado: Integer<br>
+      <i class="var">is_man</i> = true<br>
+      <i class="command">puts</i><i class="var"> is_man.class</i> # resultado: TrueClass<br>
+    </code>
+  </div>
+
+</section>
