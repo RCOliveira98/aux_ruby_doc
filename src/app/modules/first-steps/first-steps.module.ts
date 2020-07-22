@@ -32,6 +32,7 @@ import { IntroStringTypeComponent } from './data-types/string-type/intro-string-
 import { StringInterpolationComponent } from './data-types/string-type/string-interpolation/string-interpolation.component';
 import { SnakeCaseComponent } from './input-output/reader/snake-case/snake-case.component';
 import { TypeInferenceComponent } from './data-types/type-inference/type-inference.component';
+import { StrongAndDynamicTypingComponent } from './data-types/strong-and-dynamic-typing/strong-and-dynamic-typing.component';
 
 const ngZorroAnt = [
   NzIconModule,
@@ -63,7 +64,8 @@ const ngZorroAnt = [
     IntroStringTypeComponent,
     StringInterpolationComponent,
     SnakeCaseComponent,
-    TypeInferenceComponent
+    TypeInferenceComponent,
+    StrongAndDynamicTypingComponent
   ],
   imports: [
     CommonModule,

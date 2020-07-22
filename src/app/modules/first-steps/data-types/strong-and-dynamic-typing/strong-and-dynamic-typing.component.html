@@ -1,0 +1,46 @@
+<article nz-row>
+  <div>
+    <h4 class="txt-primary">Sistema de tipagem</h4>
+    <p>
+      Você já aprendeu a declarar variáveis para armazenar dados de interesse de seus programas.
+      Também já sabe que o valor de uma variável pode ser alterado. O que você ainda não viu
+      é que uma variável pode armazenar valores de tipos difentes de dados. Além do detalhe que ruby possui tipagem forte.
+    </p>
+  </div>
+
+  <div>
+    <h5 class="txt-primary">Tipagem dinâmica</h5>
+    <p>
+      Na maioria das linguagens tradicionais uma variável só pode receber dados de um único
+      tipo, tipo esse definido no momento de sua declaração. Tal característica é denominada
+      de <strong>tipagem estática</strong>.
+    </p>
+
+    <p>
+      Mas a linguagem ruby entende que uma mesma variável não só pode armazenar diferentes
+      valores, mas que tais podem ser de diferentes tipos. Ou seja, uma variável pode armazenar
+      em um momento um texto qualquer e depois um valor numérico. Chamamos essa característica
+      de <strong>tipagem dinâmica</strong>.
+    </p>
+
+    <p>
+      Observer o código abaixo onde uma variável chamada de <i>auxiliary</i> será declarada, a mesma receberá valores de tipos diferentes.
+      Ao final de cada atribuição pediremos para o tipo de dado que a variável carregará seja exibido.
+    </p>
+
+    <div class="ard-terminal mb-2">
+      <code>
+        <i class="var">auxiliary</i> = 'Romário Coelho'<br>
+        <i class="command">puts</i><i class="var"> auxiliary.class</i> # resultado: String<br>
+        <i class="var">auxiliary</i> = 1998<br>
+        <i class="command">puts</i><i class="var"> auxiliary.class</i> # resultado: Integer
+      </code>
+    </div>
+
+    <p>
+      Parece ser algo muito simples e que não merece atenção, mas muitas linguagens adotam
+      tipagem estática e que como consequência não permitem a execução do exemplo acima.
+    </p>
+  </div>
+
+</article>
