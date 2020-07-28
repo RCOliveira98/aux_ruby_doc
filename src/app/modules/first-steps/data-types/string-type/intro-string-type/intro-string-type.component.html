@@ -28,10 +28,7 @@
       </code>
     </div>
 
-    <nz-alert nzType="error" nzShowIcon nzMessage="Provavelmente recebeu o seguinte erro -> SyntaxError: unexpected tIDENTIFIER, expecting end-of-input
-    district = 'caixa d'água'
-                        ^~~~~
-    "></nz-alert>
+    <nz-alert nzType="error" nzShowIcon [nzMessage]="errorString"></nz-alert>
 
     <p>
       O erro ocorreu porque confundimos o <i>interpretador de código ruby</i> com o uso de aspas simples dentro do texto.

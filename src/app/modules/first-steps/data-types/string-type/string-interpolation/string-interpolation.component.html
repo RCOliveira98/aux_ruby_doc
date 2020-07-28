@@ -52,7 +52,7 @@
     e então convertido em um caractere antes de ser anexado.
   </p>
 
-  <nz-alert nzShowIcon nzType="info" nzMessage="Codepoint: valor numérico que representa um determinado caractere na tabela ASCII"></nz-alert>
+  <nz-alert nzShowIcon nzType="info" [nzMessage]="messageCodepoint"></nz-alert>
 
   <h6 class="txt-primary">Método + versus <<</h6>
 
@@ -123,7 +123,7 @@
     </code>
   </div>
 
-  <nz-alert nzType="error" nzShowIcon nzMessage="TypeError: no implicit conversion of Float into String"></nz-alert>
+  <nz-alert nzType="error" nzShowIcon [nzMessage]="errorConvertFloatToString"></nz-alert>
 
   <p>
     Observe que o erro sugere que existe a necessidade de converter o valor da variável do tipo
@@ -134,7 +134,7 @@
   <div class="ard-terminal mb-2">
     <code>
       <i class="var">credit</i> = 2190.55<br>
-      <i class="command">puts </i><i class="var">message</i> = 'Crédito: ' + <i class="var">credit.to_s</i>
+      <i class="command">puts </i>'Crédito: ' + <i class="var">credit.to_s</i>
     </code>
   </div>
 
@@ -143,5 +143,41 @@
     do tipo <i>float</i> para tipo <i>string</i>. Tal método sempre tenta converter o conteúdo
     do objeto que o invocou em uma <i>string</i>.
   </p>
+
+  <h6 class="txt-primary">String interpolation</h6>
+
+  <p>
+    As opções anteriores são úteis na concatenação de strings, mas no mundo ruby a
+    maneira mais utilizada é a <i>interpolação de strings(string interpolation)</i>.
+    Seu uso é muito difundido e muitos defendem que possue uma sintaxe mais elegante.
+    Ela é alternativa mais adequada quando queremos reproduzir código ruby dentro de
+    strings. Possui sintaxe muito simples, basta colocar o trecho de código ruby dentro de <strong>{{stringInterpolationSyntax}}</strong>.
+  </p>
+
+  <div class="ard-terminal mb-2">
+    <code>
+      <i class="var">credit</i> = 2190.55<br>
+      <i class="command">puts </i>"Crédito: <i class="var">{{stringInterpolationExample}}</i>"
+    </code>
+  </div>
+
+  <p>
+    Perceba que realmente é algo muito simples. Também perceba que não precisamos nos
+    preocuparmos em converter valores para tipo <i>string</i>, pois a própria linguagem
+    se encarrega de fazer isso por nós, afinal ela foi feita para ser a nossa melhor amiga.
+  </p>
+
+  <p>
+    Vale que <i>string interpolation</i> só pode ser realizada dentro de <i>aspas duplas ("")</i>.
+    Se tentarmos reproduzir o último exemplo de código usando <i>aspas simples ('')</i> não teremos sucesso, pois o resultado final não será o esperado.
+  </p>
+
+  <div class="ard-terminal mb-2">
+    <code>
+      <i class="var">credit</i> = 2190.55<br>
+      <i class="command">puts </i>'Crédito: <i class="var">{{stringInterpolationExample}}</i>'
+      # resultado => Crédito {{stringInterpolationExample}}
+    </code>
+  </div>
 
 </section>

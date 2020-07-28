@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroStringTypeComponent implements OnInit {
 
+  errorString: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.errorString = "SyntaxError: unexpected tIDENTIFIER, expecting end-of-input district = 'caixa d'água' ^~~~~";
   }
 
 }
