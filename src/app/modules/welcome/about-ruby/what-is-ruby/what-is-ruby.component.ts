@@ -13,10 +13,12 @@ export class WhatIsRubyComponent implements OnInit {
   linkEiffel: string;
   linkSmalltalk: string;
   linkC: string;
+  logoRuby: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.logoRuby = 'https://i.ibb.co/jgB2fx1/logoRuby.png';
     this.linkLisp = 'https://pt.wikipedia.org/wiki/Lisp#:~:text=Tanto%20os%20dados%20como%20o,Common%20Lisp%2C%20Scheme%20e%20Clojure.';
     this.linkAda = 'https://pt.wikipedia.org/wiki/Ada_(linguagem_de_programa%C3%A7%C3%A3o)#:~:text=Ada%20%C3%A9%20uma%20Linguagem%20de,Pascal%2C%20Simula%20e%20outras%20linguagens.&text=Ada%20%C3%A9%20uma%20aplica%C3%A7%C3%A3o%20com,tais%20como%20softwares%20de%20avia%C3%A7%C3%A3o.';
     this.linkEiffel = 'https://linguagemeiffel.wordpress.com/#:~:text=Eiffel%20%C3%A9%20uma%20Linguagem%20de,Eiffel%20%C3%A9%20baseada%20em%20classes.';

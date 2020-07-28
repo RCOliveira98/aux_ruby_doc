@@ -14,11 +14,11 @@
     </div>
 
     <div class="col-12 col-sm-8 col-md-6 col-lg-4 p-2">
-      <img src="../../../../assets/home2.svg" class="img-fluid">
+      <img [src]="imagePrimary" class="img-fluid">
     </div>
 
     <div class="col-12 col-sm-8 col-md-6 col-lg-4 p-2">
-      <img src="../../../../assets/home.svg" class="img-fluid">
+      <img [src]="imageSecondary" class="img-fluid">
     </div>
 
     <div class="col-12 col-sm-4 col-md-6 col-lg-8 p-2">
@@ -49,17 +49,25 @@
     </div>
 
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-2">
-      <nz-alert
-      nzType="info"
-      nzMessage="EXPLICAÇÃO"
-      nzDescription="Você deve está se perguntando porque o ruby não foi empregado no desenvolvimento do Aux-Ruby-Doc.
+      <h5>Por que ruby não foi utilizado?</h5>
+      <p>
+      Você deve está se perguntando porque o ruby não foi empregado no desenvolvimento do Aux-Ruby-Doc.
       Decidimos não usar ruby para o desenvolvimento do projeto, pois a plataforma na verdade nada mais é do que um
       site de compartilhamento de conteúdo, dados não são gravados, autenticação e gerenciamento de permissões não são realizados,
-      ou seja, se trata apenas de uma aplicação front-end. Portanto, chegamos a conclusão de que usar ruby meramente para construção de front-end seria fazer mau uso da tecnologia.
-      Defendemos que ruby deva ser usado para o processamamento e manipulação de dados, atuando principalmente como back-end de aplicações e não se preocupando UNICAMENTE em renderizar html.
-      Como não era a melhor escolha optamos por um framework estruturado para a construção de uma aplicação de página única (Single Page Application ou SPA), escolhendo o Angular para tal missão."
-      nzShowIcon
-      ></nz-alert>
+      ou seja, se trata apenas de uma aplicação front-end.
+      </p>
+
+      <p>
+      Portanto, chegamos a conclusão de que usar ruby meramente para construção de front-end seria fazer mau uso da tecnologia.
+      Não estamos falando que ruby não possa ser usado para desenvolver um projeto web de ponta a ponta, participando do back-end
+      e front-end, existem situações que isso se faz necessário e o sucesso do Ruby on Rails mostra isso.
+      </p>
+
+      <p>
+      No entanto, nossa plataforma não possui um back-end, apenas trabalha com html.
+      Defendemos que ruby deva ser usado para o processamamento e manipulação de dados, atuando principalmente como back-end de aplicações e <strong>não se preocupando UNICAMENTE em renderizar html</strong>.
+      Como não era a melhor escolha optamos por um framework estruturado para a construção de uma aplicação de página única (Single Page Application ou SPA), escolhendo o Angular para tal missão.
+      </p>
     </div>
   </div>
 </article>
