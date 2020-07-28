@@ -1,20 +1,147 @@
 <section nz-row>
-  <h5 class="txt-primary">Interpolação</h5>
+  <h5 class="txt-primary">Concatenação</h5>
 
   <p>
-    Interpolação de strings (<i>string interpolation</i>) é o processo de concatenar duas ou
-    mais strings. Imagine que precise retornar uma mensagem de boas vindas com o nome do
+    Concatenação é o nome que damos ao processo de unir o conteúdo de duas ou
+    mais strings formando uma única string. Imagine que precise retornar uma mensagem de boas vindas com o nome do
     usuário de seu programa. A pergunta que fica é como isso seria feito? A resposta é simples, através da concatenação!
-    <i>String interpolation</i> é a maneira mais convencional e elegante de concatenar valores resultando em uma string única. Um detalhe bastante
-    importante é que esse recurso deve ser realizado somente entre aspas duplas ("").
   </p>
 
-  <div class="container-dark b-radius mb-2">
+  <p>
+    Existem algumas possibilidades de realizar a concatenação de strings em ruby.
+    Vamos começar pela que é mais comum em outras linguagens de progamação.
+  </p>
+
+  <h6 class="txt-primary">Método +</h6>
+
+  <div class="ard-terminal mb-2">
     <code>
-      <i class="command">puts</i> 'Informe seu nome:'<br>
-      <i class="var">name</i> = gets<br>
-      <i class="command">puts</i>"Olá <i class="var">{{str}}</i>, seja bem-vindo(a)!"<br>
+      <i class="var">message</i> = 'Olá, '<br>
+      <i class="var">name</i> = 'Romário Coelho'<br>
+      <i class="var">message</i> = <i class="var">message</i> + <i class="var">name</i><br>
+      <i class="command">puts </i><i class="var"> message</i><br>
     </code>
   </div>
+
+  <p>
+    O código acima apenas exibiu a <i>string </i>
+    <span class="ard-bg-primary ard-txt-white">Olá, Romário Coelho</span>.
+    Fez isso após concatenar o conteúdo da variável <i>message</i> com o da variável <i>name</i>. Tal variável também é uma
+    <i>string</i>. A concatenação usando o método <i>+</i>
+    gerou uma nova <i>string</i> e essa foi exibida para o usuário.
+  </p>
+
+  <h6 class="txt-primary">Método <<</h6>
+
+  <p>
+    Outra alternativa para o processo de concatenação de strings é utilizar o método <i><< (append)</i>.
+  </p>
+
+  <div class="ard-terminal mb-2">
+    <code>
+      <i class="var">message</i> = 'Olá, '<br>
+      <i class="var">name</i> = 'Romário Coelho'<br>
+      <i class="var">message</i> << name<br>
+      <i class="command">puts </i><i class="var"> message</i><br>
+    </code>
+  </div>
+
+  <p>
+    O método anexa o objeto que é informado logo após a sua chamada a <i>string</i> que o invocou.
+    Se o objeto informado for tipo <i>integer</i> (número inteiro) ele será considerado um <i>codepoints</i>
+    e então convertido em um caractere antes de ser anexado.
+  </p>
+
+  <nz-alert nzShowIcon nzType="info" nzMessage="Codepoint: valor numérico que representa um determinado caractere na tabela ASCII"></nz-alert>
+
+  <h6 class="txt-primary">Método + versus <<</h6>
+
+  <p>
+    Provavelmente você se perguntou se existia diferença entre os dois métodos. A resposta
+    para essa pergunta é sim, existe uma diferença considerável entres os métodos.
+  </p>
+
+  <p>
+    Então qual é a diferença? Calma, primeiro tem que entender que quando criamos um objeto
+    em ruby tal objeto ganha um <i>identficador único (object_id)</i>, como se fosse uma espécie de CPF para nós.
+    As variáveis <i>message</i> e <i>name</i> são objetos strings, ao concatenar essas
+    variáveis usando o método <i>+</i> criamos uma <strong>nova string</strong> e pedimos para que essa fosse armazenada na variável message.
+    Já quando a concatenação foi feita usando o método <i><<</i> <strong> não geramos uma nova string</strong>, apenas atualizamos o conteúdo da variável <i>message</i>.
+  </p>
+
+  <p>
+    Acredito que você pensou em algo como: Huuum, até entendi a lógica mas como saber se
+    realmente foi criada ou não uma nova string? Para isso vamos pedir para as variáveis
+    mostrarem seus indetificadores únicos a cada operação! Isso é muito simples de ser feito
+    já que a linguagem ruby disponibiliza um método chamado de <i>object_id</i> para atender
+    esse tipo de necessidade. Analise o código abaixo:
+  </p>
+
+  <div class="ard-terminal mb-2">
+    <code>
+      <i class="var">message</i> = 'Olá, '<br>
+      <i class="command">puts </i><i class="var">message.object_id</i><br>
+      <i class="var">name</i> = 'Romário Coelho'<br>
+      <i class="var">message</i> = message + name<br>
+      <i class="command">puts </i><i class="var">message.object_id</i><br>
+    </code>
+  </div>
+
+  <p>
+    Observe que a saída gerada pelo primeiro <i>puts</i> retornou um id (object_id)
+    atribuído a <i>string</i> armazenada na variável <i>message</i>. Ao realizarmos a concatenação
+    uma nova <i>string</i> foi gerada e recebeu o seu próprio id, por isso a saída do segundo
+    <i>puts</i> exibiu um valor diferente do primeiro. Agora observe o mesmo código utilizando o <i><<</i>.
+  </p>
+
+  <div class="ard-terminal mb-2">
+    <code>
+      <i class="var">message</i> = 'Olá, '<br>
+      <i class="command">puts </i><i class="var">message.object_id</i><br>
+      <i class="var">name</i> = 'Romário Coelho'<br>
+      <i class="var">message</i> << name<br>
+      <i class="command">puts </i><i class="var">message.object_id</i><br>
+    </code>
+  </div>
+
+  <p>
+    Perceba que agora a saída de ambas as chamadas ao método <i>puts</i> retornaram o mesmo valor (id).
+  </p>
+
+  <h6 class="txt-primary">Os tipos importam</h6>
+
+  <p>
+    Lembre-se que ruby é uma linguagem de tipagem forte, ou seja, os tipos de dados
+    importam para as operações que são realizadas envolvendo os dados. Por exemplo,
+    concatenação deve ser feita envolvendo apenas dados do tipo <i>string</i>.
+  </p>
+
+  <div class="ard-terminal mb-2">
+    <code>
+      <i class="var">credit</i> = 2190.55<br>
+      <i class="command">puts </i><i class="var">message</i> = 'Crédito: ' + <i class="var">credit</i>
+    </code>
+  </div>
+
+  <nz-alert nzType="error" nzShowIcon nzMessage="TypeError: no implicit conversion of Float into String"></nz-alert>
+
+  <p>
+    Observe que o erro sugere que existe a necessidade de converter o valor da variável do tipo
+    <strong>float </strong><i>credit</i> em um valor de tipo <strong>string</strong> para que
+    a concatenação seja realizada com sucesso. Analise o código abaixo:
+  </p>
+
+  <div class="ard-terminal mb-2">
+    <code>
+      <i class="var">credit</i> = 2190.55<br>
+      <i class="command">puts </i><i class="var">message</i> = 'Crédito: ' + <i class="var">credit.to_s</i>
+    </code>
+  </div>
+
+  <p>
+    No trecho de código acima usamos o método <i>to_s</i> para converter um valor que era
+    do tipo <i>float</i> para tipo <i>string</i>. Tal método sempre tenta converter o conteúdo
+    do objeto que o invocou em uma <i>string</i>.
+  </p>
 
 </section>
