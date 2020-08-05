@@ -1,0 +1,45 @@
+<h4 class="txt-primary">Tipo Integer</h4>
+
+<p>
+  Um tipo de dado que representa os números inteiros. Alguns exemplos de valores do
+  tipo <i>Integer</i> são: 123, -31, 4223432, -123242, 0, 4142 etc.
+</p>
+
+<div class="ard-terminal">
+  <span class="var">number</span> = 90<br>
+  <i class="command">puts</i><span class="var"> number</span> # resultado: 90<br>
+  <i class="command">puts</i><span class="var"> number.class</span> # resultado: Integer
+</div>
+
+<h5 class="txt-primary mt-2">Lendo valores do tipo Integer</h5>
+
+<p>
+  Agora vamos coletar um valor do tipo <i>Integer</i> informado pelo usuário do programa.
+</p>
+
+<div class="ard-terminal">
+  <i class="command">puts </i> "Informe sua idade: "<br>
+  <span class="var">age</span> = <i class="command">gets</i><br>
+  <i class="command">puts</i><span class="var"> number.class</span> # resultado: String
+</div>
+
+<p class="mt-2">
+  Ops... Algo deu errado? Ao informar um valor inteiro imaginava-se que a variável
+  <i>age</i> estivesse armazenando um valor do tipo <i>Integer</i> e não do tipo
+  <i>String</i> como revelado pelo programa. Não sei se recorda mas já foi dito aqui
+  que por padrão o retorno do método <i>gets</i> é um valor do tipo <i>String</i>,
+  pois o método captura o valor digitado e converte automaticamente para <i>String</i>.
+</p>
+
+<p>
+  Portanto, precisamos converter o valor retornado pelo método <i>gets</i> para <i>Integer</i>,
+   já que o mesmo é um número inteiro que foi convertido para <i>String</i> automaticamente
+   pelo <i>gets</i>. Para isso basta utilizar o método <i>to_i</i>, observe:
+</p>
+
+<div class="ard-terminal">
+  <i class="command">puts </i> "Informe sua idade: "<br>
+  <span class="var">age</span> = <i class="command">gets.to_i</i><br>
+  <i class="command">puts</i><span class="var"> number.class</span> # resultado: Integer
+</div>
+

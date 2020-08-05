@@ -3,7 +3,7 @@
     <nz-collapse-panel nzHeader="Armazenando valores...">
 
       <div class="container-dark-hover-radius mb-1">
-        <h5 class="txt-primary"><fa-icon [icon]="memory"></fa-icon> Variáveis</h5>
+        <h4 class="txt-primary"><fa-icon [icon]="memory"></fa-icon> Variáveis</h4>
         <p>
           A maioria dos programas desenvolvidos precisa armazenar dados, como por exemplo: data de nascimento, endereço, número de cartão de crédito ou débito, nome etc.
           Na computação existe o que é denominado de variável, que em poucas palavras é uma posição de memória do computador destinada a armazenar valores de um dado tipo de dado.
@@ -11,7 +11,7 @@
         </p>
       </div>
 
-      <h6 class="txt-primary">Declaração e atribuição de valores</h6>
+      <h5 class="txt-primary">Declaração e atribuição de valores</h5>
 
       <p>
         Para delcarar uma variável em ruby precisamos definir apenas um nome e atribuir um valor para ela.
@@ -74,6 +74,23 @@
       </p>
 
       <nz-alert nzType="warning" [nzMessage]="msgGet" nzShowIcon class="mb-2"></nz-alert>
+
+      <h6 class="txt-primary">O valor de uma variável pode mudar...</h6>
+
+      <p>
+        Variáveis são reconhecidas por armazenarem valores, mas o valor armazenado por
+        uma variável não é fixo, ela pode muito bem armazenar diferentes valores durante
+        a vida do programa a qual ela pertence.
+      </p>
+
+      <div class="ard-terminal mb-2">
+        <code>
+          <span class="var">name</span> = 'Romário'<br>
+          <i class="command">puts</i> <span class="var"> name</span> <br>
+          <span class="var">name</span>  = 'Maria'<br>
+          <i class="command">puts</i> <span class="var"> name</span>
+        </code>
+      </div>
 
       <app-snake-case></app-snake-case>
 
