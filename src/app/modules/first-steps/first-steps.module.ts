@@ -35,6 +35,7 @@ import { TypeInferenceComponent } from './data-types/type-inference/type-inferen
 import { StrongAndDynamicTypingComponent } from './data-types/strong-and-dynamic-typing/strong-and-dynamic-typing.component';
 import { IntegerComponent } from './data-types/integer/integer.component';
 import { FloatComponent } from './data-types/float/float.component';
+import { BooleansComponent } from './data-types/booleans/booleans.component';
 
 const ngZorroAnt = [
   NzIconModule,
@@ -69,7 +70,8 @@ const ngZorroAnt = [
     TypeInferenceComponent,
     StrongAndDynamicTypingComponent,
     IntegerComponent,
-    FloatComponent
+    FloatComponent,
+    BooleansComponent
   ],
   imports: [
     CommonModule,
