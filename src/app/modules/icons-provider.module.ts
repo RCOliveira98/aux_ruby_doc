@@ -16,7 +16,8 @@ const icons = [MenuFoldOutline, MenuUnfoldOutline, DashboardOutline, FormOutline
   exports: [NzIconModule],
   providers: [
     { provide: NZ_ICONS, useValue: icons }
-  ]
+  ],
+  declarations: []
 })
 export class IconsProviderModule {
 }

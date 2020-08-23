@@ -34,6 +34,7 @@ import { SnakeCaseComponent } from './input-output/reader/snake-case/snake-case.
 import { TypeInferenceComponent } from './data-types/type-inference/type-inference.component';
 import { StrongAndDynamicTypingComponent } from './data-types/strong-and-dynamic-typing/strong-and-dynamic-typing.component';
 import { IntegerComponent } from './data-types/integer/integer.component';
+import { FloatComponent } from './data-types/float/float.component';
 
 const ngZorroAnt = [
   NzIconModule,
@@ -67,7 +68,8 @@ const ngZorroAnt = [
     SnakeCaseComponent,
     TypeInferenceComponent,
     StrongAndDynamicTypingComponent,
-    IntegerComponent
+    IntegerComponent,
+    FloatComponent
   ],
   imports: [
     CommonModule,
