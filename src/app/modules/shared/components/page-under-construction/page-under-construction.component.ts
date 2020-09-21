@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-page-under-construction',
+  templateUrl: './page-under-construction.component.html',
+  styleUrls: ['./page-under-construction.component.css']
+})
+export class PageUnderConstructionComponent implements OnInit {
+
+  public imageConstruction: string;
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.imageConstruction = 'https://i.ibb.co/dDvjMRb/under-construction.png';
+  }
+
+}
