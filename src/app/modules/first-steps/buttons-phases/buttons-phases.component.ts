@@ -31,10 +31,10 @@ export class ButtonsPhasesComponent implements OnInit {
       case 1: url = 'first_steps/installation'; break;
       case 2: url = 'first_steps/input_output'; break;
       case 3: url = 'first_steps/data_types'; break;
-      case 4: url = 'first_steps/installation'; break;
-      case 5: url = 'first_steps/installation'; break;
-      case 6: url = 'first_steps/installation'; break;
-      case 7: url = 'first_steps/installation'; break;
+      case 4: url = 'first_steps/operators'; break;
+      case 5: url = 'first_steps/decision_structure'; break;
+      case 6: url = 'first_steps/repetition_structure'; break;
+      case 7: url = 'first_steps/hash'; break;
       default: this.renderAlert = true;
     }
     if (url) {

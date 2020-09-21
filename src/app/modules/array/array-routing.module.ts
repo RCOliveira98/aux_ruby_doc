@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { IntroComponent } from './intro/intro.component';
+import { PageUnderConstructionComponent } from './../shared/components/page-under-construction/page-under-construction.component';
 
 const routes: Routes = [
-  {path: 'introduction', component: IntroComponent}
+  {path: 'introduction', component: PageUnderConstructionComponent}
 ];
 
 @NgModule({

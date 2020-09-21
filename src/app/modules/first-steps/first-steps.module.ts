@@ -1,3 +1,4 @@
+import { PageUnderConstructionComponent } from './../shared/components/page-under-construction/page-under-construction.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -24,6 +25,8 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzListModule } from 'ng-zorro-antd/list';
+
+import { SharedModule } from '../shared/shared.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DataTypesComponent } from './data-types/data-types.component';
@@ -78,7 +81,8 @@ const ngZorroAnt = [
     FirstStepsRoutingModule,
     FormsModule,
     ngZorroAnt,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ]
 })
 export class FirstStepsModule { }
