@@ -1,13 +1,21 @@
 <li nz-submenu nzOpen nzTitle="Início" nzIcon="home">
   <ul>
-    <li nz-menu-item nzMatchRouter>
+    <li nz-menu-item nzMatchRouterExact id="idArd">
       <a routerLink="/welcome">ARD</a>
     </li>
-    <li nz-menu-item nzMatchRouter>
+    <li nz-menu-item nzMatchRouterExact id="idPrimeirosPassos">
+      <a routerLink="/first_steps">Primeiros passos</a>
+    </li>
+    <li nz-menu-item nzMatchRouterExact id="idRuby">
       <a routerLink="/welcome/ruby">Ruby</a>
     </li>
-    <li nz-menu-item nzMatchRouter>
-      <a routerLink="/first_steps">Primeiros passos</a>
+
+    <li nz-menu-item nzMatchRouterExact>
+      <a routerLink="first_steps/input_output" id="idPriPass2">Entrada e saída</a>
+    </li>
+
+    <li nz-menu-item nzMatchRouterExact>
+      <a routerLink="/first_steps" id="idPriPass2">Primeiros passos</a>
     </li>
   </ul>
 </li>
