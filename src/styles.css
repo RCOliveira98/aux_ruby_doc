@@ -99,6 +99,22 @@ code {
   background-color: #fa7f72;
 }
 
+.ard-box-full {
+  min-width: 100%;
+  height: auto;
+}
+
 code .txt-primary {
   font-weight: bold;
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected, .ant-menu.ant-menu-dark .ant-menu-item-selected:focus {
+  background-color: #e86b5c;
+}
+.ard-b-rouded-5 {
+  border-radius: 5px;
+}
+
+.ard-b-rouded-10 {
+  border-radius: 10px;
 }
