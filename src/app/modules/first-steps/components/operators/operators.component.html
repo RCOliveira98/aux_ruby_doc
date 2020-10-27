@@ -1,0 +1,20 @@
+<div nz-row>
+    <div nz-col nzSpan="24">
+        <nz-card nzTitle="Introdução" [nzExtra]="iconCard">
+            <p>
+                A linguagem ruby apresenta três (03) tipos de operadores: os <strong>aritméticos</strong>, os <strong>lógicos</strong> e os <strong>relacionais</strong>. 
+            </p>
+
+            <div nz-row>
+                <div nz-col nzSpan="24">
+                    <app-arithmetic-operators></app-arithmetic-operators>
+                </div>
+            </div>
+            
+        </nz-card>
+    </div>
+</div>
+
+<ng-template #iconCard>
+    <fa-icon [icon]="iconBook"></fa-icon>
+</ng-template>
