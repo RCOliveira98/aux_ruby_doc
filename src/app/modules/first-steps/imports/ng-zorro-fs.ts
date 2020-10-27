@@ -4,6 +4,7 @@ import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 export const ngZorroFs = [
     NzIconModule,
@@ -11,5 +12,6 @@ export const ngZorroFs = [
     NzSelectModule,
     NzAlertModule,
     NzCardModule,
-    NzListModule
+    NzListModule,
+    NzTableModule
 ];

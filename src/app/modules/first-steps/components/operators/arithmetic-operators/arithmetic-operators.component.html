@@ -2,8 +2,43 @@
     <div nz-col nzSpan="24">
         <nz-card nzTitle="Operadores aritméticos" [nzExtra]="iconCard">
             <p>
-                Os operadores aritméticos são os responsáveis pelas operações matemáticas. Ruby nos disponibiliza seis (06) desses operadores:
+                Os operadores aritméticos são os responsáveis pelas operações matemáticas básicas. 
+                Ruby nos disponibiliza seis (06) desses operadores, confira a tabela abaixo:
             </p>
+
+            <nz-table  #tbl [nzData]="operationsList">
+              <thead>
+                <tr>
+                  <th>NOME</th>
+                  <th>SÍMBOLO</th>
+                  <th>EXEMPLO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of tbl.data">
+                  <td>{{i?.name | uppercase}}</td>
+                  <td><strong>{{i?.symbol}}</strong></td>
+                  <td>{{i?.example}}</td>
+                </tr>
+              </tbody>
+            </nz-table>
+
+            <h5 class="txt-primary">Prática</h5>
+
+            <p>
+                Agora chegou a hora de testar os operadores aritméticos no console (pry ou irb), confira:
+            </p>
+
+            <div class="ard-terminal">
+                <span class="var">num1</span> = 10<br>
+                <span class="var">num2</span> = 3<br>
+                <span class="command">puts </span> <span class="var">num1</span> + <span class="var">num2</span> # resultado = 13<br>
+                <span class="command">puts </span> <span class="var">num1</span> - <span class="var">num2</span> # resultado = 7<br>
+                <span class="command">puts </span> <span class="var">num1</span> * <span class="var">num2</span> # resultado = 30<br>
+                <span class="command">puts </span> <span class="var">num1</span> / <span class="var">num2</span> # resultado = 3.33<br>
+                <span class="command">puts </span> <span class="var">num1</span> % <span class="var">num2</span> # resultado = 1<br>
+                <span class="command">puts </span> <span class="var">num1</span> ** <span class="var">num2</span> # resultado = 1000
+            </div>
             
         </nz-card>
     </div>
