@@ -6,7 +6,7 @@
                 Ruby nos disponibiliza seis (06) desses operadores, confira a tabela abaixo:
             </p>
 
-            <nz-table  #tbl [nzData]="operationsList">
+            <nz-table  #tbl [nzData]="operationsList" [nzFrontPagination]="false">
               <thead>
                 <tr>
                   <th>NOME</th>
@@ -23,7 +23,9 @@
               </tbody>
             </nz-table>
 
-            <h5 class="txt-primary">Prática</h5>
+            <h5 class="txt-primary">
+              <fa-icon [icon]="iconTerminal"></fa-icon> Na prática
+            </h5>
 
             <p>
                 Agora chegou a hora de testar os operadores aritméticos no console (pry ou irb), confira:
@@ -45,5 +47,5 @@
 </div>
 
 <ng-template #iconCard>
-    <fa-icon [icon]="iconEbook"></fa-icon>
+    <fa-icon [icon]="iconCalc"></fa-icon>
 </ng-template>

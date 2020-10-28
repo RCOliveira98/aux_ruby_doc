@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faCalculator, faTerminal } from '@fortawesome/free-solid-svg-icons';
 
 import { Operators } from '../models/operators.model';
 
@@ -11,7 +11,8 @@ import { Operators } from '../models/operators.model';
 })
 export class ArithmeticOperatorsComponent implements OnInit {
 
-  iconEbook = faBook;
+  iconCalc = faCalculator;
+  iconTerminal = faTerminal;
   operationsList: Operators[];
 
   constructor() { }
